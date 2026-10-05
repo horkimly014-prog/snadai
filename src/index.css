@@ -1,0 +1,43 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* A faint "ghost" watermark sitting over the white page background. The
+   white gradient layer on top of the image is what keeps it subtle. */
+body {
+  background-color: #f9f9f9;
+  background-image: linear-gradient(
+      rgba(249, 249, 249, 0.1),
+      rgba(249, 249, 249, 0.1)
+    ),
+    url("./assets/image/39.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-size: cover, cover;
+  background-attachment: fixed, fixed;
+}
+
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 999px;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.25) transparent;
+}
